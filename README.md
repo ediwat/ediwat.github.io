@@ -1,2 +1,2 @@
 # ediwat.github.io
-testing before github deployment
+Landing page testing
