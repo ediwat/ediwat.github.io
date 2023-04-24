@@ -12,10 +12,10 @@
 		<div class="row justify-content-center align-items-center" style="height: 100vh">
 			<div class="col-md-6 text-center">
 				<h1>Would You Recommend Us?</h1>
-				<button type="button" class="btn btn-success">
-                    <a href="https://search.google.com/local/writereview?placeid=ChIJW4gGbiBzhlQR9gYBaV8ILic&pli=1" style ="text-decoration:none; color: inherit;">
+				<button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#approvalModal">
+                    <!--<a href="https://search.google.com/local/writereview?placeid=ChIJW4gGbiBzhlQR9gYBaV8ILic&pli=1" style ="text-decoration:none; color: inherit;">
                         YES, I WOULD
-                    </a>
+                    </a> --> YES, I WOULD
                 </button>
 				<button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#reviewModal">
                     NO, I WOULD NOT
@@ -23,7 +23,28 @@
 			</div>
 		</div>
 
-        <!-- Modal Block-->
+                <!-- Modal Block Approval-->
+                <div class="modal fade" id="approvalModal" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 class="modal-title"><b>We thank you greatly for your approval!</b></h3>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body p-5 pt-0">
+                                <h5>Would you like to leave us a review on us?</h5> 
+                                <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" button type="submit"> 
+                                    <a href="https://search.google.com/local/writereview?placeid=ChIJW4gGbiBzhlQR9gYBaV8ILic&pli=1" style ="text-decoration:none; color: inherit;">
+                                        Write a review!
+                                    </a>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+        <!-- Modal Block Feedback-->
         <div class="modal fade" id= "reviewModal" tabindex="-1">
             <div class="modal-dialog modal-dialog-centered">
               <div class="modal-content">
@@ -36,7 +57,9 @@
                         <!-- Captcha disabling -->
                         <input type="test" name="_trap" style="display: none;">
                         <input type="hidden" name="_captcha" value="false">
-
+                        <!-- redirect after clicking submit 
+                        <input type="hidden" name="_next" value="https://waterfrontderm.com/">
+                        -->
                         <h5>We would appreciate you letting us know how we can improve our service.</h5>
                         <div class="form-floating mb-3">
                             <textarea type="text" class="form-control rounded-3" name="Feedback" style="height:120px" id="floatingInput" required></textarea>
