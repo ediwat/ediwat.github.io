@@ -51,15 +51,12 @@
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                     <div class="modal-body p-5 pt-0">
-                    <form class ="" action="https:formsubmit.co/ediwatalternative@gmail.com" method="POST">
-                        <!-- Captcha disabling -->
-                        <input type="test" name="_trap" style="display: none;">
-                        <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_url" value="https://feedback.waterfront.com/index.html">
-
-                        <!-- redirect after clicking submit 
-                        <input type="hidden" name="_next" value="https://waterfrontderm.com/">
-                        -->
+                    <form action="https://api.web3forms.com/submit" method="POST">
+                        <!-- Hidden -->
+                        <input type="hidden" name="access_key" value="f37c89f4-9ea0-4541-8c0a-45b2e972c6ac">
+                        <input type="hidden" name="redirect" value="https://web3forms.com/success">
+                        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                        <!-- redirect after clicking submit  -->
                         <h5>We would appreciate you letting us know how we can improve our service.</h5>
                         <div class="form-floating mb-3">
                             <textarea type="text" class="form-control rounded-3" name="Feedback" style="height:120px" id="floatingInput" required></textarea>
@@ -68,6 +65,10 @@
                         <div class="form-floating mb-3">
                             <input type="text" class="form-control rounded-3" name="First&nbsp;Name" id="floatingName" required>
                             <label for="floatingName">First Name</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control rounded-3" name="Email" id="floatingEmail">
+                            <label for="floatingEmail">Email (Not Required)</label>
                         </div>
                         <div>
                             <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" button type="submit">Send Review</button>
